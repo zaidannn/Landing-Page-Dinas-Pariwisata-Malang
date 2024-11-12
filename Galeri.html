@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri Kegiatan</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* CSS untuk seluruh halaman */
+      body {
+        background-color: #e0e0e0;  /* Abu-abu terang sebagai background utama */
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #ffffff; /* Putih untuk header agar tetap kontras */
+      }
+
+      footer {
+        background-color: #ffffff; /* Putih untuk footer agar tetap kontras */
+      }
+
+      /* CSS untuk Galeri */
+      .gallery {
+        padding: 50px 0;
+        background-color: #e0e0e0; /* Abu-abu lebih gelap untuk section galeri */
+      }
+
+      .gallery-item {
+        margin-bottom: 30px;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .gallery-item-title {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333333; /* Warna teks yang kontras */
+      }
+
+      /* Responsive settings */
+      @media (max-width: 767px) {
+        .gallery-item-title {
+          font-size: 16px;
+        }
+      }
+
+      .pagination {
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .pagination .page-link {
+        padding: 10px 15px;
+        margin: 0 5px;
+        border-radius: 5px;
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+      }
+
+      .pagination .page-link.active {
+        background-color: #555;
+      }
+
+      .pagination .page-link.disabled {
+        background-color: #ddd;
+        color: #aaa;
+        pointer-events: none;
+      }
+    </style>
+</head>
+<body>
+    <!-- Awal header -->
+    <header>
+      <div class="header bg-light p-3 text-center">
+        <h2>Galeri Kegiatan</h2>
+      </div>
+    </header>
+    <!-- Akhir header -->
+
+    <!-- Awal galeri -->
+    <section class="gallery container" id="gallery-section">
+      <div class="row" id="gallery-row">
+        <!-- Foto 1 -->
+        <div class="col-sm-6 col-md-4 gallery-item" data-date="2024-09-06">
+          <img src="images/galeri/foto1.png" alt="Kegiatan 6 September" />
+          <div class="gallery-item-title">6 September 2024 - Kegiatan 1</div>
+        </div>
+
+        <!-- Foto 2 -->
+        <div class="col-sm-6 col-md-4 gallery-item" data-date="2024-09-05">
+          <img src="images/galeri/foto1.png" alt="Kegiatan 5 September" />
+          <div class="gallery-item-title">5 September 2024 - Kegiatan 2</div>
+        </div>
+
+        <!-- Foto 3 -->
+        <div class="col-sm-6 col-md-4 gallery-item" data-date="2024-09-04">
+          <img src="images/galeri/foto1.png" alt="Kegiatan 4 September" />
+          <div class="gallery-item-title">4 September 2024 - Kegiatan 3</div>
+        </div>
+
+        <!-- Foto 4 -->
+        <div class="col-sm-6 col-md-4 gallery-item" data-date="2024-08-30">
+          <img src="images/galeri/foto1.png" alt="Kegiatan 30 Agustus" />
+          <div class="gallery-item-title">30 Agustus 2024 - Kegiatan 4</div>
+        </div>
+
+        <!-- Foto 5 -->
+        <div class="col-sm-6 col-md-4 gallery-item" data-date="2024-08-28">
+          <img src="images/galeri/foto1.png" alt="Kegiatan 28 Agustus" />
+          <div class="gallery-item-title">28 Agustus 2024 - Kegiatan 5</div>
+        </div>
+
+        <!-- Foto 6 -->
+        <div class="col-sm-6 col-md-4 gallery-item" data-date="2024-08-25">
+          <img src="images/galeri/foto1.png" alt="Kegiatan 25 Agustus" />
+          <div class="gallery-item-title">25 Agustus 2024 - Kegiatan 6</div>
+        </div>
+
+        <!-- Foto 7 -->
+        <div class="col-sm-6 col-md-4 gallery-item" data-date="2024-09-07">
+          <img src="images/galeri/foto2.png" alt="Kegiatan 7 September" />
+          <div class="gallery-item-title">7 September 2024 - Kegiatan 7</div>
+        </div>
+
+        <!-- Foto 8 -->
+        <div class="col-sm-6 col-md-4 gallery-item" data-date="2024-09-08">
+          <img src="images/galeri/foto2.png" alt="Kegiatan 8 September" />
+          <div class="gallery-item-title">8 September 2024 - Kegiatan 8</div>
+        </div>
+
+        <!-- Foto 9 -->
+        <div class="col-sm-6 col-md-4 gallery-item" data-date="2024-09-09">
+          <img src="images/galeri/foto2.png" alt="Kegiatan 9 September" />
+          <div class="gallery-item-title">9 September 2024 - Kegiatan 9</div>
+        </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <a href="#" id="prev-page" class="page-link disabled">Previous</a>
+        <a href="#" id="page-1" class="page-link active">1</a>
+        <a href="#" id="page-2" class="page-link">2</a>
+        <a href="#" id="next-page" class="page-link">Next</a>
+      </div>
+    </section>
+    <!-- Akhir galeri -->
+
+    <!-- Awal footer -->
+    <footer class="text-center p-3 bg-light">
+      <p>&copy; 2024 Dinas Pariwisata dan Kebudayaan Kabupaten Malang</p>
+    </footer>
+    <!-- Akhir footer -->
+
+    <script>
+      // JavaScript untuk pagination
+      document.addEventListener("DOMContentLoaded", function () {
+        const gallerySection = document.getElementById("gallery-section");
+        const galleryItems = Array.from(gallerySection.getElementsByClassName("gallery-item"));
+        const itemsPerPage = 6;
+        const totalPages = Math.ceil(galleryItems.length / itemsPerPage);
+        
+        let currentPage = 1;
+
+        function showPage(page) {
+          if (page < 1 || page > totalPages) return;
+          currentPage = page;
+          galleryItems.forEach((item, index) => {
+            item.style.display = index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage ? "block" : "none";
+          });
+
+          document.getElementById("prev-page").classList.toggle("disabled", currentPage === 1);
+          document.getElementById("next-page").classList.toggle("disabled", currentPage === totalPages);
+          
+          document.querySelectorAll(".pagination .page-link").forEach(link => {
+            link.classList.remove("active");
+          });
+          document.getElementById(`page-${currentPage}`).classList.add("active");
+        }
+
+        document.getElementById("prev-page").addEventListener("click", () => showPage(currentPage - 1));
+        document.getElementById("next-page").addEventListener("click", () => showPage(currentPage + 1));
+        document.getElementById("page-1").addEventListener("click", () => showPage(1));
+        document.getElementById("page-2").addEventListener("click", () => showPage(2));
+
+        showPage(currentPage);
+      });
+    </script>
+</body>
+</html>
